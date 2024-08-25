@@ -1,12 +1,12 @@
 package com.jogo_de_mapa.jogo_de_mapa.entity;
 
 import java.util.List;
-
-import org.springframework.data.annotation.Id;
-
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
+import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,6 +16,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @Data
+@Entity
+@Table(name = "countries")
 public class Country {
 
     @Id
@@ -37,6 +39,10 @@ public class Country {
 
     public Integer getResources() {
         return provinces.stream().mapToInt(Province::getResources).sum();
+    }
+
+    public Integer getInfrastructure() {
+        return provinces.stream().mapToInt(Province::getInfrastructure).sum();
     }
     
     public Province getProvinceById(String provinceId) {

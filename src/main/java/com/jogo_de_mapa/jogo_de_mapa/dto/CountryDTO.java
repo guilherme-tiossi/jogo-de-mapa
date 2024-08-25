@@ -18,5 +18,6 @@ public class CountryDTO {
     private Double population;
     private Integer economy;
     private Integer resources;
+    private Integer infrastructure;
     private List<ProvinceDTO> provinces;
 }
