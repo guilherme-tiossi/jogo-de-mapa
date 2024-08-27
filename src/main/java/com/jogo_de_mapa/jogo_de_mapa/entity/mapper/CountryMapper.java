@@ -1,9 +1,10 @@
-package com.jogo_de_mapa.jogo_de_mapa.mapper;
+package com.jogo_de_mapa.jogo_de_mapa.entity.mapper;
 
-import com.jogo_de_mapa.jogo_de_mapa.dto.CountryDTO;
-import com.jogo_de_mapa.jogo_de_mapa.dto.ProvinceDTO;
 import com.jogo_de_mapa.jogo_de_mapa.entity.Country;
 import com.jogo_de_mapa.jogo_de_mapa.entity.Province;
+import com.jogo_de_mapa.jogo_de_mapa.entity.dto.CountryDTO;
+import com.jogo_de_mapa.jogo_de_mapa.entity.dto.ProvinceDTO;
+
 import org.springframework.stereotype.Component;
 
 import java.util.List;
